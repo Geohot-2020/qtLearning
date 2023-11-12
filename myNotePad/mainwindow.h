@@ -7,6 +7,8 @@
 #include <QString>
 #include <QDebug>
 #include <QFile>
+#include <QKeyEvent>
+#include <QMouseEvent>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -19,6 +21,8 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void keyPressEvent(QKeyEvent *k);
+    void mousePressEvent(QMouseEvent *m);
 
 private slots:
     void newActionSlot();
