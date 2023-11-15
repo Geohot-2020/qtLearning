@@ -39,16 +39,3 @@ void Widget::newClientHandler()
 
     connect(t, &myThread::sendToWidget, this, &Widget::threadSlot);
 }
-
-//void Widget::clientInfoSlot()
-//{
-//    // 获取信号的发出者
-//    QTcpSocket *s = (QTcpSocket *)sender();
-//    ui->mainLineEdit->setText(QString(s->readAll()));
-
-//}
-
-void Widget::threadSlot(QByteArray b)
-{
-    ui->mainLineEdit->setText(QString(b));
-}
