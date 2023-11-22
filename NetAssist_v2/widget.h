@@ -6,6 +6,8 @@
 #include <QUdpSocket>
 #include <QHostAddress>
 #include <QMessageBox>
+#include <QFileDialog>
+#include <QDebug>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Widget; }
@@ -30,6 +32,14 @@ private slots:
     void readData();
 
     void on_clearRecvButton_clicked();
+
+    void on_saveRecvButton_clicked();
+
+    void on_openRecvButton_clicked();
+
+    void on_recvJoinMulBt_clicked();
+
+    void on_recvQuitMulBt_clicked();
 
 private:
     Ui::Widget *ui;
